@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TvShowStatusView">
+        <attr name="status" format="enum">
+            <enum name="unknown" value="0" />
+            <enum name="ended" value="1" />
+            <enum name="in_development" value="2" />
+            <enum name="to_be_determined" value="3" />
+            <enum name="running" value="4" />
+        </attr>
+    </declare-styleable>
+</resources>

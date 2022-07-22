@@ -1,0 +1,36 @@
+plugins {
+    id("com.android.library")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("kotlinx-serialization")
+    id("dagger.hilt.android.plugin")
+}
+
+android {
+    compileSdk 32
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    kapt {
+        correctErrorTypes = true
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialization_json"
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0'
+
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+    implementation("androidx.hilt:hilt-common:$hilt_common")
+    kapt("androidx.hilt:hilt-compiler:$hilt_common")
+}

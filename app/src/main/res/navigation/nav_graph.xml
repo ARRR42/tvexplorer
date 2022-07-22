@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tvShowsListFragment">
+
+    <fragment
+        android:id="@+id/tvShowsListFragment"
+        android:name="com.example.tvexplorer.com.example.tvexplorer.ui.tvShowsList.TvShowsListFragment"
+        android:label="fragment_tv_shows_list"
+        tools:layout="@layout/fragment_tv_shows_list">
+        <action
+            android:id="@+id/action_tvShowsListFragment_to_tvShowDetailsFragment"
+            app:destination="@id/tvShowDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tvShowDetailsFragment"
+        android:name="com.example.tvexplorer.com.example.tvexplorer.ui.tvShowDetails.TvShowDetailsFragment"
+        android:label="fragment_tv_show_details"
+        tools:layout="@layout/fragment_tv_show_details">
+        <argument
+            android:name="tvShowId"
+            app:argType="long" />
+
+        <argument
+            android:name="tvShowTitle"
+            app:argType="string" />
+
+        <argument
+            android:name="fromFavorites"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteTvShowsListFragment"
+        android:name="com.example.tvexplorer.com.example.tvexplorer.ui.favorites.FavoriteTvShowsListFragment"
+        android:label="FavoriteTvShowsListFragment"
+        tools:layout="@layout/fragment_favorite_tv_shows">
+        <action
+            android:id="@+id/action_favoriteTvShowsListFragment_to_tvShowDetailsFragment"
+            app:destination="@id/tvShowDetailsFragment" />
+    </fragment>
+
+
+</navigation>

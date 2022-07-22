@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TV Explorer</string>
+    <string name="tv_shows_list_hint_enter_search_query">Enter search query</string>
+    <string name="tv_shows_list_nothing_found">Nothing found</string>
+    <string name="tv_shows_list_find_something_hint">Start searching TV Shows with input above</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="tv_show_details_no_aliases">no aliases found</string>
+    <string name="tv_show_details_aliases_mask">Aliases: %s</string>
+</resources>
